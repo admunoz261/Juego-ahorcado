@@ -107,17 +107,34 @@ IMAGENES = ['''
        / \          |
                     |
         ============|''',
+        
 
 
 
 ]
 
 WORDS = [
+    #Si pones mayusculas, en el juego debes ponerla en mayuscula
     'sofa',
     'gobierno',
     'computadora',
     'murcielago',
-    'comida'
+    'comida',
+    'avion',
+    'zapato',
+    'pajaro',
+    'esternocleidomastoideo',
+    'naranja',
+    'araña',
+    'pintura',
+    'pantalla',
+    'codigo',
+    'privado',
+    'publico',
+    'lenguaje',
+    'java',
+    'kotlin',
+
 ]
 
 def random_word():
@@ -129,6 +146,7 @@ def display_board(hidden_word, tries):
     print('')
     print(hidden_word)
     print('-----*-----*-----*-----*-----*-----*')
+    
 def run():
     word = random_word()
     hidden_word = ['-'] * len(word)
@@ -139,6 +157,7 @@ def run():
         current_letter = str(input('Escoge una letra: '))
 
         letter_indexes = []
+
         for idx in range(len(word)):
             if word[idx] == current_letter:
                 letter_indexes.append(idx)
@@ -168,5 +187,6 @@ def run():
             break
 
 if __name__ == '__main__':
+    #Autor: Alejandro Muñoz ☻ >•<
     print("Bienvenidos al ahorcado")
     run()
